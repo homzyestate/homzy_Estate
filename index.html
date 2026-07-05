@@ -1,279 +1,158 @@
 <!DOCTYPE html>
-<html lang="ur">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homzy Estate | Islamabad's Premium Real Estate</title>
+    <title>Homzy Estate | Premium Real Estate Islamabad</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap');
         
-        :root {
-            --gold: #D4AF37;
-        }
-        
-        .tail-container {
-            font-family: 'Inter', system-ui, sans-serif;
-        }
-        
-        .heading-font {
-            font-family: 'Playfair Display', sans-serif;
-        }
+        .tail-container { font-family: 'Inter', system-ui, sans-serif; }
+        .heading-font { font-family: 'Playfair Display', sans-serif; }
 
         .hero-bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)), 
+            background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), 
                              url('https://picsum.photos/id/1015/2000/1200');
             background-size: cover;
             background-position: center;
         }
 
         .project-card {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
         .project-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 25px 50px -12px rgb(212 175 55 / 0.25);
-        }
-
-        .nav-link {
-            position: relative;
-        }
-        
-        .nav-link:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: #D4AF37;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-link:hover:after {
-            width: 100%;
-        }
-
-        .gold-gradient {
-            background: linear-gradient(90deg, #D4AF37, #f5d57a, #D4AF37);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            transform: translateY(-15px);
+            box-shadow: 0 30px 60px -12px rgb(212 175 55 / 0.25);
         }
     </style>
 </head>
-<body class="tail-container bg-zinc-950 text-zinc-200 overflow-x-hidden">
-    <!-- NAVBAR -->
+<body class="tail-container bg-zinc-950 text-zinc-200">
+
+    <!-- Navbar -->
     <nav class="bg-zinc-950 border-b border-zinc-800 fixed w-full z-50">
         <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="w-9 h-9 bg-amber-400 rounded-full flex items-center justify-center text-zinc-950 font-bold text-2xl shadow-inner">H</div>
-                <div>
-                    <span class="text-3xl font-bold tracking-tighter heading-font">Homzy</span>
-                    <span class="text-amber-400 text-3xl font-bold tracking-tighter heading-font">Estate</span>
-                </div>
+                <div class="w-10 h-10 bg-amber-400 rounded-2xl flex items-center justify-center text-zinc-950 font-bold text-3xl">H</div>
+                <div class="text-3xl font-bold tracking-tighter heading-font">Homzy <span class="text-amber-400">Estate</span></div>
             </div>
-            
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a href="#home" class="nav-link text-white hover:text-amber-400 transition-colors">Home</a>
-                <a href="#projects" class="nav-link text-white hover:text-amber-400 transition-colors">Projects</a>
-                <a href="#about" class="nav-link text-white hover:text-amber-400 transition-colors">About Us</a>
-                <a href="#contact" class="nav-link text-white hover:text-amber-400 transition-colors">Contact</a>
-            </div>
-            
-            <div class="flex items-center gap-4">
-                <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });" 
-                        class="px-6 py-2.5 bg-amber-400 hover:bg-amber-300 transition-all text-zinc-950 font-semibold rounded-xl text-sm flex items-center gap-2">
-                    <i class="fa-solid fa-phone"></i>
-                    <span>ارتباط کریں</span>
-                </button>
-                <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-2xl">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            </div>
-        </div>
-        
-        <div id="mobile-menu" class="hidden md:hidden bg-zinc-900 border-t border-zinc-800 py-4">
-            <div class="flex flex-col px-6 gap-4 text-lg">
-                <a href="#home" class="py-2 border-b border-zinc-800">Home</a>
-                <a href="#projects" class="py-2 border-b border-zinc-800">Projects</a>
-                <a href="#about" class="py-2 border-b border-zinc-800">About Us</a>
-                <a href="#contact" class="py-2">Contact</a>
+            <div class="hidden md:flex gap-8 text-sm font-medium">
+                <a href="#home" class="hover:text-amber-400 transition-colors">Home</a>
+                <a href="#projects" class="hover:text-amber-400 transition-colors">Projects</a>
+                <a href="#about" class="hover:text-amber-400 transition-colors">About Us</a>
+                <a href="#contact" class="hover:text-amber-400 transition-colors">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- HERO -->
-    <section id="home" class="hero-bg h-screen flex items-center relative">
-        <div class="max-w-7xl mx-auto px-6 pt-20">
-            <div class="max-w-2xl">
-                <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-5 py-2 rounded-3xl text-sm mb-6 border border-white/20">
-                    <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
-                    <span class="uppercase tracking-widest text-amber-400 text-xs font-medium">Islamabad, Pakistan</span>
-                </div>
-                
-                <h1 class="text-6xl md:text-7xl font-bold leading-none heading-font mb-6">
-                    اپنے <span class="gold-gradient">خوابوں کا گھر</span><br>پائیں
+    <!-- Hero -->
+    <section id="home" class="hero-bg h-screen flex items-center">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-3xl">
+                <h1 class="text-6xl md:text-7xl font-bold heading-font leading-none">
+                    Premium Properties in<br><span class="text-amber-400">Islamabad</span>
                 </h1>
-                
-                <p class="text-xl text-zinc-400 mb-10 max-w-md">
-                    Homzy Estate — Islamabad کے پریمئم رئیل اسٹیٹ پارٹنر۔ 
-                    Skylite Builders، Faisal Town اور Blue World City کے لگژری پروجیکٹس۔
+                <p class="mt-8 text-2xl text-zinc-300">
+                    Your trusted real estate partner for Skylite Builders, Faisal Town & Blue World City
                 </p>
-                
-                <div class="flex flex-wrap gap-4">
-                    <button onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });" 
-                            class="px-8 py-4 bg-amber-400 hover:bg-white hover:text-zinc-900 transition-all rounded-2xl font-semibold text-lg flex items-center gap-3 group">
-                        پروجیکٹس دیکھیں
-                        <i class="fa-solid fa-arrow-right group-active:rotate-45 transition-transform"></i>
-                    </button>
-                    
-                    <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });" 
-                            class="px-8 py-4 border border-white/50 hover:border-amber-400 transition-all rounded-2xl font-medium text-lg">
-                        آج ہی رابطہ کریں
-                    </button>
-                </div>
+                <button onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})" 
+                        class="mt-12 px-10 py-5 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-semibold rounded-2xl text-lg transition-all">
+                    Explore Projects
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- PROJECTS -->
+    <!-- Projects -->
     <section id="projects" class="py-24 bg-zinc-900">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="uppercase text-amber-400 tracking-[3px] text-sm font-medium">Our Exclusive Projects</span>
-                <h2 class="text-5xl heading-font font-semibold mt-3">Premium Properties in Islamabad</h2>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="project-card bg-zinc-800 rounded-3xl overflow-hidden group">
-                    <div class="h-72 bg-cover bg-center relative" style="background-image: url('https://picsum.photos/id/1015/800/600')">
-                        <div class="absolute top-4 right-4 bg-black/70 text-amber-400 text-xs font-medium px-4 py-1 rounded-2xl">Villas</div>
-                    </div>
+            <h2 class="text-5xl heading-font text-center mb-4">Our Projects</h2>
+            <p class="text-center text-zinc-400 mb-16">Handpicked premium developments in Islamabad & surroundings</p>
+
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Skylite Builders -->
+                <div class="project-card bg-zinc-800 rounded-3xl overflow-hidden">
+                    <div class="h-80 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/1015/800/600')"></div>
                     <div class="p-8">
-                        <div class="flex justify-between items-start mb-4">
-                            <div>
-                                <h3 class="text-2xl font-semibold heading-font">Skylite Builders</h3>
-                                <p class="text-amber-400 text-sm">Bahria Town Phase 8</p>
-                            </div>
-                            <div class="text-right">
-                                <span class="block text-xs text-zinc-400">From</span>
-                                <span class="text-2xl font-bold text-amber-400">Rs. 85 Lac</span>
-                            </div>
-                        </div>
-                        <p class="text-zinc-400 text-[15px]">5 & 10 Marla luxury villas with modern architecture and smart home features.</p>
-                        <button onclick="alert('Thank you! Our team will contact you for Skylite Builders.')" class="mt-8 w-full py-4 border border-amber-400/30 hover:bg-amber-400 hover:text-zinc-900 transition-all rounded-2xl text-sm font-semibold">DETAILS SEE</button>
+                        <h3 class="text-3xl font-bold heading-font">Skylite Builders</h3>
+                        <p class="text-amber-400 mt-1">Islamabad • Rawalpindi</p>
+                        <p class="mt-6 text-zinc-300">Luxury apartments, villas & commercial projects. Trusted since 2018 with 10+ completed projects including Skylite Residencia, Skylite 63 Faisal Hills, and multiple arcades.</p>
+                        <a href="https://skylitebuilders.com/" target="_blank" class="mt-8 inline-block w-full text-center py-4 border border-amber-400 rounded-2xl hover:bg-amber-400 hover:text-zinc-950 transition-all">Visit Official Website →</a>
                     </div>
                 </div>
 
-                <div class="project-card bg-zinc-800 rounded-3xl overflow-hidden group">
-                    <div class="h-72 bg-cover bg-center relative" style="background-image: url('https://picsum.photos/id/201/800/600')">
-                        <div class="absolute top-4 right-4 bg-black/70 text-amber-400 text-xs font-medium px-4 py-1 rounded-2xl">Residential</div>
-                    </div>
+                <!-- Faisal Town -->
+                <div class="project-card bg-zinc-800 rounded-3xl overflow-hidden">
+                    <div class="h-80 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/201/800/600')"></div>
                     <div class="p-8">
-                        <div class="flex justify-between items-start mb-4">
-                            <div>
-                                <h3 class="text-2xl font-semibold heading-font">Faisal Town</h3>
-                                <p class="text-amber-400 text-sm">Main Murree Road</p>
-                            </div>
-                            <div class="text-right">
-                                <span class="block text-xs text-zinc-400">From</span>
-                                <span class="text-2xl font-bold text-amber-400">Rs. 45 Lac</span>
-                            </div>
-                        </div>
-                        <p class="text-zinc-400 text-[15px]">Modern 3, 5 & 10 Marla plots and ready-to-move houses.</p>
-                        <button onclick="alert('Thank you! Our team will contact you for Faisal Town.')" class="mt-8 w-full py-4 border border-amber-400/30 hover:bg-amber-400 hover:text-zinc-900 transition-all rounded-2xl text-sm font-semibold">DETAILS SEE</button>
+                        <h3 class="text-3xl font-bold heading-font">Faisal Town Phase 2 & Faisal Hills</h3>
+                        <p class="text-amber-400 mt-1">Murree Road, Islamabad</p>
+                        <p class="mt-6 text-zinc-300">Modern residential society offering 3, 5 & 10 Marla plots and houses. Prime location with excellent connectivity and developing infrastructure.</p>
                     </div>
                 </div>
 
-                <div class="project-card bg-zinc-800 rounded-3xl overflow-hidden group">
-                    <div class="h-72 bg-cover bg-center relative" style="background-image: url('https://picsum.photos/id/251/800/600')">
-                        <div class="absolute top-4 right-4 bg-black/70 text-amber-400 text-xs font-medium px-4 py-1 rounded-2xl">International</div>
-                    </div>
+                <!-- Blue World City -->
+                <div class="project-card bg-zinc-800 rounded-3xl overflow-hidden">
+                    <div class="h-80 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/251/800/600')"></div>
                     <div class="p-8">
-                        <div class="flex justify-between items-start mb-4">
-                            <div>
-                                <h3 class="text-2xl font-semibold heading-font">Blue World City</h3>
-                                <p class="text-amber-400 text-sm">CPEC Route</p>
-                            </div>
-                            <div class="text-right">
-                                <span class="block text-xs text-zinc-400">From</span>
-                                <span class="text-2xl font-bold text-amber-400">Rs. 35 Lac</span>
-                            </div>
-                        </div>
-                        <p class="text-zinc-400 text-[15px]">Pakistan's first international standard housing society.</p>
-                        <button onclick="alert('Thank you! Our team will contact you for Blue World City.')" class="mt-8 w-full py-4 border border-amber-400/30 hover:bg-amber-400 hover:text-zinc-900 transition-all rounded-2xl text-sm font-semibold">DETAILS SEE</button>
+                        <h3 class="text-3xl font-bold heading-font">Blue World City</h3>
+                        <p class="text-amber-400 mt-1">CPEC Route, Islamabad</p>
+                        <p class="mt-6 text-zinc-300">International standard housing society featuring Japan & China Technology Park, Grand Central Park, Overseas Block, and world-class amenities.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ABOUT -->
+    <!-- About Us -->
     <section id="about" class="py-24 bg-zinc-950">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-12 gap-16 items-center">
-                <div class="md:col-span-5">
-                    <div class="aspect-square bg-cover bg-center rounded-3xl" style="background-image: url('https://picsum.photos/id/866/800/800')"></div>
-                </div>
-                <div class="md:col-span-7">
-                    <span class="px-5 py-2 bg-amber-400/10 text-amber-400 text-sm rounded-3xl">Since 2018</span>
-                    <h2 class="text-5xl heading-font font-semibold mt-6 leading-tight">Islamabad کے سب سے بھروسہ مند رئیل اسٹیٹ بروکر</h2>
-                    <p class="mt-8 text-zinc-400 text-lg leading-relaxed">
-                        Homzy Estate ایک جدید رئیل اسٹیٹ کمپنی ہے جو Islamabad اور اس کے آس پاس پریمیم پراپرٹی کے مواقع فراہم کرتی ہے۔
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-5xl heading-font mb-8">About Homzy Estate</h2>
+                    <p class="text-zinc-300 text-lg leading-relaxed">
+                        Homzy Estate is a premium real estate marketing firm based in Islamabad. 
+                        We specialize in promoting high-end residential and commercial projects with complete transparency and professionalism.
+                    </p>
+                    <p class="mt-6 text-zinc-300 text-lg leading-relaxed">
+                        Our focus is to connect clients with the best investment opportunities in Skylite Builders, Faisal Town, and Blue World City.
                     </p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="py-24 bg-zinc-950">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-16">
-                <div>
-                    <h2 class="text-5xl heading-font font-semibold mb-8">رابطہ کریں</h2>
-                    <div class="space-y-8">
-                        <div class="flex gap-6">
-                            <div class="w-12 h-12 bg-amber-400/10 rounded-2xl flex items-center justify-center text-2xl text-amber-400"><i class="fa-solid fa-phone"></i></div>
-                            <div>
-                                <div class="font-medium text-lg">Call / WhatsApp</div>
-                                <a href="tel:+923001234567" class="text-amber-400">+92 300 1234567</a>
-                            </div>
+                <div class="space-y-6">
+                    <div class="flex gap-6">
+                        <i class="fa-solid fa-check text-3xl text-amber-400 mt-1"></i>
+                        <div>
+                            <h4 class="font-semibold text-xl">Expert Guidance</h4>
+                            <p class="text-zinc-400">Market knowledge and best investment advice</p>
                         </div>
-                        <div class="flex gap-6">
-                            <div class="w-12 h-12 bg-amber-400/10 rounded-2xl flex items-center justify-center text-2xl text-amber-400"><i class="fa-solid fa-envelope"></i></div>
-                            <div>
-                                <div class="font-medium text-lg">Email</div>
-                                <a href="mailto:info@homzyestate.com" class="text-amber-400">info@homzyestate.com</a>
-                            </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <i class="fa-solid fa-check text-3xl text-amber-400 mt-1"></i>
+                        <div>
+                            <h4 class="font-semibold text-xl">CDA Approved Projects</h4>
+                            <p class="text-zinc-400">Only legal and secure investments</p>
                         </div>
                     </div>
                 </div>
-                
-                <div class="bg-zinc-900 p-10 rounded-3xl border border-zinc-700">
-                    <form onsubmit="event.preventDefault(); alert('شکریہ! ہماری ٹیم جلد ہی آپ سے رابطہ کرے گی۔'); this.reset();" class="space-y-6">
-                        <input type="text" placeholder="آپ کا نام" class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-5 py-4" required>
-                        <input type="tel" placeholder="فون نمبر" class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-5 py-4" required>
-                        <select class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-5 py-4">
-                            <option>Skylite Builders</option>
-                            <option>Faisal Town</option>
-                            <option>Blue World City</option>
-                        </select>
-                        <textarea placeholder="پیغام" rows="4" class="w-full bg-zinc-800 border border-zinc-700 rounded-3xl px-5 py-4"></textarea>
-                        <button type="submit" class="w-full py-5 bg-amber-400 text-zinc-950 font-bold rounded-3xl">پیغام بھیجیں</button>
-                    </form>
-                </div>
             </div>
         </div>
     </section>
 
-    <script>
-        // Mobile Menu
-        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
-    </script>
+    <!-- Contact -->
+    <section id="contact" class="py-24 bg-zinc-900">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-5xl heading-font mb-6">Get In Touch</h2>
+            <p class="text-xl text-zinc-400 mb-10">Ready to invest? Contact us for details and site visits.</p>
+            
+            <div class="bg-zinc-800 rounded-3xl p-10">
+                <a href="tel:+923291171595" class="block text-4xl font-semibold text-amber-400 hover:text-amber-300 transition-colors">
+                    +92 329 1171595
+                </a>
+                <p class="mt-8 text-zinc-400">Call / WhatsApp</p>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
